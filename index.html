@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<!--- ICS20-Unit5-04-HTML -->
+<!--- ICS2O-Unit5-04-HTML -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="My first PWA" />
+    <meta name="description" content="And, Or conditions" />
     <meta name="keywords" content="mths, ics2o" />
-    <meta name="author" content="Lucas Tyman" />
+    <meta name="author" content="Kenny Le" />
     <meta name="theme-color" content="#FFFFFF" />
-    <link rel="canonical" href="https://https://Lucas-Tyman.github.io/ICS20-Unit5-04-HTML//" />
-    <link rel="manifest" href="/ICS20-Unit5-04-HTML/manifest.webmanifest" />
+    <link rel="canonical" href="https://https://Lucas-Tyman.github.io/ICS2O-Unit5-04-HTML//" />
+    <link rel="manifest" href="/ICS2O-Unit5-04-HTML/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
     <!--- None blocking for Lighthouse report --->
     <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously -->
@@ -18,31 +18,81 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <title>GitHub page as PWA template</title>
+    <title>Museum Admission</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">My first PWA</span>
-        </div>
+    <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class = "mdl-layout__header">
+        <div class = "mdl-layout__header-row">      
+          <span class = "mdl-layout-title">Museum Admission</span>
+        </div>       
       </header>
-      <main class="mdl-layout__content">
-        <p></p>
-        <img src="./images/temperature.svg" alt="temperature" width="25%" height="25%">
-        <p></p>
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
-        >
-          Say "Hello, World!"
+      <main class = "mdl-layout__content">
+        <img src="./images/museum.svg" alt="movie" width="40%" height="40%">
+        <h4>What will the price of the museum admisson be?</h4>
+        <form>
+          <h5>Enter the day</h5>
+          <!-- Radiobox 1 -->
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="sunday">
+            <input type="radio" id="sunday" class="mdl-radio__button" name="day">
+            <span class="mdl-radio__label">Sunday</span>
+          </label>
+          <br>
+          <!-- Radiobox 2 -->
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="monday">
+            <input type="radio" id="monday" class="mdl-radio__button" name="day">
+            <span class="mdl-radio__label">Monday</span>
+          </label>
+          <br>
+          <!-- Radiobox 3 -->
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tuesday">
+            <input type="radio" id="tuesday" class="mdl-radio__button" name="day">
+            <span class="mdl-radio__label">Tuesday</span>
+          </label>
+          <br>
+          <!-- Radiobox 4 -->
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="wednesday">
+            <input type="radio" id="wednesday" class="mdl-radio__button" name="day">
+            <span class="mdl-radio__label">Wednesday</span>
+          </label>
+          <br>
+          <!-- Radiobox 5 -->
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="thursday">
+            <input type="radio" id="thursday" class="mdl-radio__button" name="day">
+            <span class="mdl-radio__label">Thursday</span>
+          </label>
+          <br>
+          <!-- Radiobox 6 -->
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="friday">
+            <input type="radio" id="friday" class="mdl-radio__button" name="day">
+            <span class="mdl-radio__label">Friday</span>
+          </label>
+          <br>
+          <!-- Radiobox 7 -->
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="saturday">
+            <input type="radio" id="saturday" class="mdl-radio__button" name="day">
+            <span class="mdl-radio__label">Saturday</span>
+          </label>
+        </form>
+        <br>
+        <br>
+        <h5>Please input your age:</h5>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age">
+            <label class="mdl-textfield__label" for="age">Enter your age:</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Colored raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="check()">
+          Check
         </button>
-        <!-- basic text -->
         <p></p>
-        <div id="hello-world"></div>
+        <div id="museum"></div> 
       </main>
     </div>
   </body>
